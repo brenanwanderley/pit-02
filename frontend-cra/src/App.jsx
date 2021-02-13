@@ -1,32 +1,14 @@
-import React, { useState } from 'react';
-import { Alert } from 'react-bootstrap';
-
+import React from 'react';
 import Card from './components/Card';
+import Header from './components/Header';
 
-const App = () => {
-  const [show, setShow] = useState(true);
-
-  return (
+const App = () => (
+  <div className="">
+    <Header title="PITANG 2" />
     <div className="p-4">
-      <h1>Olá Mundo</h1>
-
-      <Alert show={show} onClose={() => setShow(!show)} dismissible variant="primary">
-        Oi Alerta 2
-      </Alert>
-
-      <Card title="Pitang">
-        <h3>Testando...</h3>
-      </Card>
-
-      <Card title="Pitang 2">
-        <h3>Testando... 123</h3>
-      </Card>
-
-      <Card title="Pitang 3">
-        <h3>Testando... 123</h3>
-      </Card>
+      <Card title="Home" />
     </div>
-  );
-};
+  </div>
+);
 
 export default App;
